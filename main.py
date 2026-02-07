@@ -5,9 +5,12 @@ from pydantic import BaseModel
 from typing import List
 from transformers import pipeline
 from langdetect import detect, LangDetectException
+# source venv/bin/activate
+# uvicorn main:app --reload
+# TODO: 6. Улучшение Python-скрипта Суммаризация: Используй небольшую LLM (например, Llama-3 или Saiga), чтобы она писала краткий вывод: "В целом пользователи довольны подарком, но многие жалуются на долгую доставку". Авто-теги: Группировка комментов по темам (вопросы, жалобы, благодарности).
 
 # --- КОНФИГУРАЦИЯ ---
-API_KEY_SECRET = "your_super_secret_key_here" # Замени на свой секрет
+API_KEY_SECRET = "python_secret_key" # Замени на свой секрет
 
 class MultilingualSentimentAnalyzer:
     def __init__(self):
