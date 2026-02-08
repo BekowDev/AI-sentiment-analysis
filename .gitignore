@@ -1,21 +1,23 @@
-# Byte-compiled / cache
-__pycache__/
-*.py[cod]
+# Игнорируем папки и файлы, которые не должны попадать в репозиторий
+downloader.py
 
-# Virtual environments
-.venv/
+# Виртуальное окружение (папка venv на скриншоте)
 venv/
+ENV/
 env/
 
-# Environment variables
+# Кэш Python (__pycache__ на скриншоте)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Модели (папка local_models на скриншоте)
+# Модели весят очень много, их нельзя пушить в Git
+local_models/
+
+# Переменные окружения (если появятся токены или ключи)
 .env
 
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-
-# Logs
+# Логи и временные файлы
 *.log
+.DS_Store
